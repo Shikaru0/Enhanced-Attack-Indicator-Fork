@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "enhanced-attack-indicator-fork",
+	"version": "${version}",
+	"name": "Enhanced-Attack-Indicator-Fork",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/enhanced-attack-indicator-fork/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"name.modid.EnhancedAttackIndicatorFork"
+		],
+		"client": [
+			"name.modid.client.EnhancedAttackIndicatorForkClient"
+		]
+	},
+	"mixins": [
+		"enhanced-attack-indicator-fork.mixins.json",
+		{
+			"config": "enhanced-attack-indicator-fork.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
